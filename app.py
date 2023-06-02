@@ -27,7 +27,7 @@ picked = st.selectbox('Pick City', city_lst)
 picked_city = df['CITY'] == picked
 df_map = df[picked_city]
 st.map(df_map)
-st.bar_chart(p_df['COUNT'], x = p_df['LOC'])
+st.bar_chart(p_df['LOC'], x = p_df['COUNT'])
 
 st.text_area('South Korea')
 
