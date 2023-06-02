@@ -1,10 +1,14 @@
 import streamlit as st
 import pandas as pd
 
-csv_file_path = 'Bus_stop_data.csv'
+csv_file_path1 = 'Bus_stop_data.csv'
+csv_file_path2 = 'people.csv'
 
-data = pd.read_csv(csv_file_path)
-new_columns = ['NUM', 'NAME', 'LAT', 'LON', 'date', 'h_key', 'code', 'city', 'at']
+data = pd.read_csv(csv_file_path1)
+people = pd.read_csv(csv_file_path2)
+
+new_columns = ['NUM', 'NAME', 'LAT', 'LON', 'DATE', 'H_KEY', 'CODE', 'CITY', 'AT']
+new_columns2 = ['loc', 
 df = data.rename(columns=dict(zip(data.columns, new_columns)))
 
 
