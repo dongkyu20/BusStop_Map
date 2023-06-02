@@ -11,6 +11,6 @@ df = data.rename(columns=dict(zip(data.columns, new_columns)))
 
 st.text_area('South Korea')
 dd = st.selectbox('pick city', ['아산시', '파주시'])
-is_x = df['at'] == dd
+is_x = df['city'] == dd
 df_map = df[is_x]
 st.map(df_map)
