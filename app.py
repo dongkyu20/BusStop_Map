@@ -41,5 +41,6 @@ picked_count = picked_t['COUNT']
 st.map(df_map)
 # st.bar_chart(chart_df)
 
-st.text_area(all_count)
+all_count
+picked_count
 
