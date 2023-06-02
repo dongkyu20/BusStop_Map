@@ -32,13 +32,14 @@ picked_tmp = p_df['LOC'] == picked
 picked_t = p_df[picked_tmp]
 picked_count = picked_t['COUNT']
 
-all_count
-picked_count
+type(all_count)
+type(picked_count)
 
-# chart_df = pd.concat([all_count,picked_count])
+
 
 
 st.map(df_map)
 # st.bar_chart(chart_df)
 
+# chart_df = pd.concat([all_count,picked_count])
 chart_df
