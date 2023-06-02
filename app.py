@@ -28,7 +28,7 @@ picked_city = df['CITY'] == picked
 df_map = df[picked_city]
 
 picked_tmp = p_df['LOC'] == picked
-picked_count = picked_tmp[picked_tmp]
+picked_count = p_df[picked_tmp]
 
 
 
