@@ -34,7 +34,7 @@ picked_count = picked_tmp['COUNT']
 chart_list = [['전국', all_count],[picked_city, picked_count]]
 
 st.map(df_map)
-st.bar_chart(chart_list)
+# st.bar_chart(chart_list)
 
 st.text_area('South Korea')
 
