@@ -9,7 +9,7 @@ df = data.rename(columns=dict(zip(data.columns, new_columns)))
 
 
 city_lst = list(set(df['city']))
-
+city_lst.sort()
 
 st.text_area('South Korea')
 dd = st.selectbox('pick city', city_lst)
