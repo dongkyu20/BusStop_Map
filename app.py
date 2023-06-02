@@ -31,7 +31,7 @@ df_map = df[picked_city]
 picked_tmp = p_df[picked_city]
 picked_count = picked_tmp['COUNT']
 
-chart_df = pd.DataFrame({'ID':[20190103, 20190222],
+chart_df = pd.DataFrame({'ID':[picked, 20190222],
                              'name':['Kim', 'Lee'],
                              'class':['H', 'W']})
 
