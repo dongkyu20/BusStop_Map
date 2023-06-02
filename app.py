@@ -16,8 +16,9 @@ new_columns2 = ['LOC', 'COUNT']
 df = data.rename(columns=dict(zip(data.columns, new_columns)))
 p_df = people.rename(columns=dict(zip(people.columns, new_columns2)))
 
-
-
+all_city = p_df['LOC'] == '전국'
+all_tmp = p_df[all_city]
+all_count = all_tmp['COUNT']
 
 
 city_lst = list(set(df['CITY']))
@@ -26,8 +27,14 @@ city_lst.sort()
 picked = st.selectbox('Pick City', city_lst)
 picked_city = df['CITY'] == picked
 df_map = df[picked_city]
+
+picked_tmp = p_df[picked]
+picked_count = picked_tmp['COUNT']
+
+chart_list = [['전국', all_count],[picked_city, picked_count]]
+
 st.map(df_map)
-st.bar_chart(p_df['LOC'], x = p_df['COUNT'])
+st.bar_chart(chart_list)
 
 st.text_area('South Korea')
 
