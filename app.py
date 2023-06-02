@@ -29,7 +29,8 @@ picked_city = df['CITY'] == picked
 df_map = df[picked_city]
 
 picked_tmp = p_df['LOC'] == picked
-picked_count = picked_tmp['COUNT']
+picked_t = p_df[picked_tmp]
+picked_count = picked_t['COUNT']
 
 chart_df = pd.DataFrame({'CITY':['전국',picked],
                              'COUNT':[all_count, picked_count],
