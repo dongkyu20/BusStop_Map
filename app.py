@@ -32,15 +32,10 @@ picked_tmp = p_df['LOC'] == picked
 picked_t = p_df[picked_tmp]
 picked_count = picked_t['COUNT']
 
+chart_df = pd.concat([all_count,pickec_count])
 
-
-# chart_df = pd.DataFrame({'CITY':['전국',picked],
-#                              'COUNT':[all_count, picked_count],
-#                              'DENSITY':['H', 'W']})
 
 st.map(df_map)
 # st.bar_chart(chart_df)
 
-all_count
-picked_count
-
+chart_df
