@@ -9,7 +9,7 @@ df = data.rename(columns=dict(zip(data.columns, new_columns)))
 
 
 
-city_lst = list(set(df['NAME', 'city']))
+city_lst = list(set(df['city']))
 city_lst.sort()
 
 picked = st.selectbox('Pick City', city_lst)
