@@ -31,7 +31,9 @@ df_map = df[picked_city]
 picked_tmp = p_df[picked_city]
 picked_count = picked_tmp['COUNT']
 
-chart_df = pd.DataFrame({'전국':[123, 12], picked_city :[10, 2]})
+chart_df = pd.DataFrame({'ID':[20190103, 20190222, 20190531],
+                             'name':['Kim', 'Lee', 'Jeong'],
+                             'class':['H', 'W', 'S']}, index = ['a', 'b', 'c'])
 
 st.map(df_map)
 st.bar_chart(chart_df)
