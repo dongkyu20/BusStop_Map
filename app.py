@@ -17,8 +17,7 @@ df = data.rename(columns=dict(zip(data.columns, new_columns)))
 p_df = people.rename(columns=dict(zip(people.columns, new_columns2)))
 
 all_city = p_df['LOC'] == '전국'
-all_tmp = p_df[all_city]
-all_count = all_tmp['COUNT']
+all_count = p_df[all_city]
 
 
 city_lst = list(set(df['CITY']))
@@ -29,8 +28,7 @@ picked_city = df['CITY'] == picked
 df_map = df[picked_city]
 
 picked_tmp = p_df['LOC'] == picked
-picked_t = p_df[picked_tmp]
-picked_count = picked_t['COUNT']
+picked_count = picked_tmp[picked_tmp]
 
 
 
@@ -38,5 +36,5 @@ picked_count = picked_t['COUNT']
 st.map(df_map)
 # st.bar_chart(chart_df)
 
-chart_df = pd.concat([all_count,picked_count], axis = 1)
+chart_df = pd.concat([all_count,picked_count])
 chart_df
