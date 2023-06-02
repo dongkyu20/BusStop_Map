@@ -12,7 +12,7 @@ city_lst = list(set(df['city']))
 city_lst.sort()
 
 st.text_area('South Korea')
-picked = st.selectbox('pick city', city_lst)
+picked = st.selectbox('Pick City', city_lst)
 picked_city = df['city'] == picked
 df_map = df[picked_city]
 st.map(df_map)
