@@ -37,5 +37,6 @@ st.map(df_map)
 
 
 chart_df = pd.concat([all_count,picked_count])
+chart_df
 
 st.bar_chart(chart_df)
