@@ -8,6 +8,9 @@ new_columns = ['NUM', 'NAME', 'LAT', 'LON', 'date', 'h_key', 'code', 'city', 'at
 df = data.rename(columns=dict(zip(data.columns, new_columns)))
 
 
+
 st.text_area('South Korea')
 dd = st.selectbox('pick city', ['아산시', '파주시'])
-st.map(df)
+is_x = df['at'] == dd
+df_map = df[is_x]
+st.map(df_map)
