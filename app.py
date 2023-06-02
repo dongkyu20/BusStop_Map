@@ -35,12 +35,12 @@ picked_count = picked_t['COUNT']
 print(picked_count)
 print(all_count)
 
-chart_df = pd.DataFrame({'CITY':['전국',picked],
-                             'COUNT':[all_count, picked_count],
-                             'DENSITY':['H', 'W']})
+# chart_df = pd.DataFrame({'CITY':['전국',picked],
+#                              'COUNT':[all_count, picked_count],
+#                              'DENSITY':['H', 'W']})
 
 st.map(df_map)
-st.bar_chart(chart_df)
+# st.bar_chart(chart_df)
 
-st.text_area('South Korea')
+# st.text_area('South Korea')
 
