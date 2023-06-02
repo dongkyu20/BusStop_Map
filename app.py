@@ -28,7 +28,7 @@ picked = st.selectbox('Pick City', city_lst)
 picked_city = df['CITY'] == picked
 df_map = df[picked_city]
 
-picked_tmp = p_df[picked_city]
+picked_tmp = p_df['LOC'] == picked
 picked_count = picked_tmp['COUNT']
 
 chart_df = pd.DataFrame({'CITY':['전국',picked],
