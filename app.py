@@ -32,8 +32,7 @@ picked_tmp = p_df['LOC'] == picked
 picked_t = p_df[picked_tmp]
 picked_count = picked_t['COUNT']
 
-st.print('111111')
-# st.print(all_count)
+
 
 # chart_df = pd.DataFrame({'CITY':['전국',picked],
 #                              'COUNT':[all_count, picked_count],
@@ -42,5 +41,5 @@ st.print('111111')
 st.map(df_map)
 # st.bar_chart(chart_df)
 
-# st.text_area('South Korea')
+st.text_area(all_count)
 
