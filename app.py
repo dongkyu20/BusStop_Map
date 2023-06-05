@@ -1,3 +1,5 @@
+import chart_studio
+chart_studio.tools.set_credentials_file(username='dongkyu20', api_key='undrtxdyaz')
 import plotly.express as px
 import streamlit as st
 import pandas as pd
