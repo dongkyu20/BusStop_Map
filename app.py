@@ -39,7 +39,7 @@ st.map(df_map)
 chart_df = pd.concat([all_count,picked_count])
 chart_df
 
-fig1 = px.bar(chart_df,x='CITY',y='COUNT')
+fig1 = px.bar(chart_df,x='LOC',y='COUNT')
 # chart_df
 
 st.plotly_chart(fig1)
