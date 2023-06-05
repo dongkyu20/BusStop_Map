@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 
 csv_file_path1 = 'Bus_stop_data.csv'
 csv_file_path2 = 'people_re.csv'
