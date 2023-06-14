@@ -43,7 +43,7 @@ st.map(df_map)
 fig1_df = pd.concat([people_all_count, people_seoul_count])
 fig2_df = pd.concat([fig1_df, people_picked_count])
 
-people_fig = px.bar(fig2_df, x='지역', y='인구수')
+people_fig = px.bar(fig2_df, x='지역', y='인구수') #x축, y축 라벨 설정
 
 people = fig2_df['인구수']
 
